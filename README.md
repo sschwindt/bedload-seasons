@@ -1,2 +1,6 @@
-# bedload-seasons
-Codes and data for bedload season analysis
+# Bedload Seasons
+
+Read the detailed Python code docs at https://bedload-seasons.readthedocs.io
+
+
+

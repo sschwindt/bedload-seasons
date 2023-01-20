@@ -1,6 +1,16 @@
-BSD 3-Clause License
+Disclaimer and License
+======================
 
-Copyright (c) 2023, Sebastian Schwindt and Beatriz Negreiros
+Disclaimer (general)
+--------------------
+
+No warranty is expressed or implied regarding the usefulness or completeness of the information provided for *tke-analyst* and its documentation. References to commercial products do not imply endorsement by the Author of *tke-analyst*. The concepts, materials, and methods used in the codes and described in the docs are for informational purposes only. The Author have made substantial effort to ensure the accuracy of the code and the docs and the Author shall not be held liable, nor their employers or funding sponsors, for calculations and/or decisions made on the basis of application of *tke-analyst*. The information is provided "as is" and anyone who chooses to use the information is responsible for her or his own choices as to what to do with the code, docs, and data and the individual is responsible for the results that follow from their decisions.
+
+BSD 3-Clause License
+--------------------
+
+Copyright (c) 2022, the Author.
+All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
 modification, are permitted provided that the following conditions are met:
@@ -16,7 +26,7 @@ modification, are permitted provided that the following conditions are met:
    contributors may be used to endorse or promote products derived from
    this software without specific prior written permission.
 
-THIS SOFTWARE AND DATA IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
 AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
 IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
 DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
