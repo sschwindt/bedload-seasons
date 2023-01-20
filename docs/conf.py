@@ -31,6 +31,14 @@ autodoc_mock_imports = [
     "matplotlib",
     "numpy",
     "pandas",
+    "scikit_learn",
+    "scipy",
+    "statsmodels.api",
+    "pylab",
+    "statannotations.Annotator",
+    "fitter",
+    "scikit_posthocs",
+    "sklearn"
 ]
 
 project = u"Bedload Season Analyst"
