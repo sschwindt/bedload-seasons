@@ -1,5 +1,7 @@
-from .mor_fun import *
-
+try:
+    from .mor_fun import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 # load and clean bedload data
 df = pd.read_excel(
@@ -8,8 +10,6 @@ df = pd.read_excel(
     skiprows=lambda x: x in [1],   # skip second row containing units
 )
 
-# remove rosgen classes (Marwan advice)
-df.drop(columns='rosgen', inplace=True)
 # substitute '-' entries with nan
 df = df.mask(df == '-')
 # mask elements where water depth was zero but bedload was given
@@ -17,9 +17,7 @@ df['water_depth'] = df['water_depth'].mask(df['water_depth'] == 0)
 # replace F and T letters with pseudo-booleans (real booleans crashes histograms)
 df['dam'] = df['dam'].replace({'F': False, 'T': True})
 df['glaciation_current'] = df['glaciation_current'].replace({'F': False, 'T': True})
-df['glaciation_earlier'] = df['glaciation_earlier'].replace({'F': False, 'T': True})
 df['snowmelt_during_meas'] = df['snowmelt_during_meas'].replace({'F': False, 'T': True})
-df['snowmelt_prone'] = df['snowmelt_prone'].replace({'F': False, 'T': True})
 df['confinement'] = df['confinement'].replace({'F': 'Unconfined', 'T': 'Confined (unknown)', 'EC': 'Confined (engineered)', 'SC': 'Confined (naturally)'})
 
 # ranked categories according to 50 percent median height regarding bedload of corresponding categories

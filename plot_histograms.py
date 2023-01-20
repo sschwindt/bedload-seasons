@@ -1,7 +1,10 @@
 """
 Plot and save histograms of measurement frequency per variable category
 """
-from bedPyLoad.categorize import *
+try:
+    from bedPyLoad.categorize import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 
 def plot_category_histograms(directory):

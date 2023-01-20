@@ -1,4 +1,7 @@
-from .get_data import *
+try:
+    from .get_data import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 
 # constants
@@ -40,8 +43,8 @@ df_cat = df[[
     # transformed numerical vars
     'slope_cat', 'altitude_cat', 'sinuosity_cat', 'entrench_cat', 'd50_cat', 'fr_cat', 'omega_x_cat', 'Phi_cat',
     # inherent categorical variables
-    'seasonality', 'm-b', 'confinement', 'flow_regime', 'snowmelt_prone', 'snowmelt_during_meas',
-    'dam', 'glaciation_current', 'glaciation_earlier', 'sampler type', 'river_source',
+    'seasonality', 'confinement', 'flow_regime', 'snowmelt_during_meas',
+    'dam', 'glaciation_current', 'sampler type', 'river_source',
 ]]
 
 # extract data frame of numerical variables only

@@ -1,33 +1,36 @@
 # import all required packages and load basic data frames
-import os, sys
-import logging
-from itertools import combinations
-import pandas as pd
-from scipy import stats
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-import numpy as np
-# for distribution checking
-import statsmodels.api as sm  # qq plot
-import pylab  # qq plot
-import seaborn as sns
-from statannotations.Annotator import Annotator
-from fitter import Fitter, get_common_distributions, get_distributions
-import scikit_posthocs as sp
-# for model development
-from sklearn.feature_selection import f_regression
-from sklearn.preprocessing import LabelEncoder
-from sklearn.ensemble import RandomForestRegressor
-from sklearn.neural_network import MLPRegressor
-from sklearn.model_selection import train_test_split, cross_val_score, KFold
-from sklearn.metrics import r2_score
-from sklearn.metrics import mean_squared_error
-pd.options.mode.chained_assignment = None  # default='warn'
-# for workbook manipulation
-from .workbook_fun import write_xlsx, append_df_to_excel
-# load modified msno (not the pip-installed one)
-sys.path.insert(0, os.path.dirname(__file__))
-import missingno as msno
+try:
+    import os, sys
+    import logging
+    from itertools import combinations
+    import pandas as pd
+    from scipy import stats
+    import matplotlib as mpl
+    import matplotlib.pyplot as plt
+    import numpy as np
+    # for distribution checking
+    import statsmodels.api as sm  # qq plot
+    import pylab  # qq plot
+    import seaborn as sns
+    from statannotations.Annotator import Annotator
+    from fitter import Fitter, get_common_distributions, get_distributions
+    import scikit_posthocs as sp
+    # for model development
+    from sklearn.feature_selection import f_regression
+    from sklearn.preprocessing import LabelEncoder
+    from sklearn.ensemble import RandomForestRegressor
+    from sklearn.neural_network import MLPRegressor
+    from sklearn.model_selection import train_test_split, cross_val_score, KFold
+    from sklearn.metrics import r2_score
+    from sklearn.metrics import mean_squared_error
+    pd.options.mode.chained_assignment = None  # default='warn'
+    # for workbook manipulation
+    from .workbook_fun import write_xlsx, append_df_to_excel
+    # load modified msno (not the pip-installed one)
+    sys.path.insert(0, os.path.dirname(__file__))
+    import missingno as msno
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 # set constants
 g = 9.81

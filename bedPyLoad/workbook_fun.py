@@ -1,12 +1,15 @@
-import os
-from pathlib import Path
-from copy import copy
-from typing import Union, Optional
-import numpy as np
-import pandas as pd
-import openpyxl
-from openpyxl import load_workbook
-from openpyxl.utils import get_column_letter
+try:
+    import os
+    from pathlib import Path
+    from copy import copy
+    from typing import Union, Optional
+    import numpy as np
+    import pandas as pd
+    import openpyxl
+    from openpyxl import load_workbook
+    from openpyxl.utils import get_column_letter
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 
 def copy_excel_cell_range(

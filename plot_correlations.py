@@ -1,8 +1,10 @@
 """
 Plot and save dataset completeness and Spearman correlatins
 """
-from bedPyLoad.categorize import *
-
+try:
+    from bedPyLoad.categorize import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 if __name__ == '__main__':
     # create correlation plot

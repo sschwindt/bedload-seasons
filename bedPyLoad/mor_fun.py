@@ -2,9 +2,12 @@
 Script provides functions for application at all levels, for instance, to plot data.
 more_fun is an acronym for 'morpho-analyst functions' or 'more fun', depending on your preference
 """
-import os.path
-import pandas
-from .config import *
+try:
+    import os.path
+    import pandas
+    from .config import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 
 def annotated_plot(

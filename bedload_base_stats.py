@@ -1,9 +1,10 @@
 """
 Script should run standalone to avoid OS-foced shutdown of the code because of memory usage
 """
-
-from bedPyLoad.categorize import *
-
+try:
+    from bedPyLoad.categorize import *
+except Exception as e:
+    print('Import incomplete - errors likely:\n' + str(e))
 
 @log_actions
 def calcNdraw_stats_glob(
