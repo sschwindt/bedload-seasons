@@ -31,7 +31,7 @@ To create the boxplots with with Kruskal-Wallis H (KWH) tests shown in the manus
 
     python bedload_base_stats.py
 
-Running this script can take a couple of minutes on a slow computer, create logfiles with information on the fitting process, and boxplot-figures in the directory ``HOME/figures/``.
+Running this script can take a couple of minutes on a slow computer, and boxplot-figures in the directory ``HOME/figures/``.
 
 Histograms of Variable Frequency
 ++++++++++++++++++++++++++++++++

@@ -6,7 +6,7 @@ try:
 except Exception as e:
     print('Import incomplete - errors likely:\n' + str(e))
 
-@log_actions
+
 def calcNdraw_stats_glob(
         dataframe: pandas.DataFrame,
         base_directory: str,
