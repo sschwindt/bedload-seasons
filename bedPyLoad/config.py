@@ -116,9 +116,9 @@ SUB_CATEGORY_ORDER = {
     'flow_regime': ['perennial', 'intermittent', 'ephemeral'],
     'sinuosity_cat': ['straight', 'low sinuosity', 'meandering', 'tortuously meandering', 'braided'],
     # use the following line with bedload-data-valid-samplers.xlsx
-    'sampler type': ['Helley-Smith (single unit)', 'Helley-Smith (multiple)', 'others'],
+    'sampler type': ['Helley-Smith (single device)', 'Helley-Smith (multiple)', 'others'],
     # uncomment the following line and comment the previous line when using bedload-data.xlsx
-    # 'sampler type': ['Helley-Smith (single unit)', 'Helley-Smith (multiple)', 'Hydrophones', 'Cross-sectional traps', 'others'],
+    # 'sampler type': ['Helley-Smith (single device)', 'Helley-Smith (multiple)', 'Hydrophones', 'Cross-sectional traps', 'others'],
     'glaciation_current': False,
     'entrench_cat': ['entrenched', 'moderately entrenched', 'slightly entrenched', 'wide'],
     'log_omega_x_cat': ['very little stream power', 'little stream power', 'moderate stream power', 'high stream power', 'very high stream power'],
