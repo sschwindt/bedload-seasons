@@ -41,7 +41,7 @@ df['log_omega_x'] = log_omega_x
 df['ratio_dis_bl'] = df['bedload'] / rho_s / df['discharge']
 df = df[df['ratio_dis_bl'] < 0.1]
 # treat bedload measurements and grain characteristics
-df['Phi'] = (df['unit_bedload'] / (rho_s * (s - 1) * np.sqrt(g) * df['d_50'] ** 1.5)).to_numpy().astype(float)
+df['Phi'] = (df['unit_bedload'] / (rho_s * np.sqrt((s - 1) * g) * df['d_50'] ** 1.5)).to_numpy().astype(float)
 df['log_Phi'] = np.log(df['Phi'].to_numpy(copy=True))
 df['D_x'] = (df['d_max'] - df['d_50']) / df['d_50']
 df['D_x'] = df['D_x'].mask(df['D_x'] <= 0.0)  # remove entries where a d_max dummy makes that d_max > d_50

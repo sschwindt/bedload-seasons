@@ -2,6 +2,7 @@ from osgeo import ogr, osr
 import pandas as pd
 import numpy as np
 
+
 def transform_4326_to_3857(lat, long):
     # make spatial references
     # 4326 in
@@ -37,9 +38,13 @@ pts_df = pd.read_csv("site-coordinates.csv", header=0)
 pts_df["lat 3857"] = np.nan
 pts_df["lon 3857"] = np.nan
 
-print(pts_df.head())
+# print(pts_df.head())
 
-for e in pts_df.iterrows():
-    e["lat 3857"], e["lon 3857"] = transform_4326_to_3857(e["lat"], e["lon"])
+for index, row in pts_df.iterrows():
+    if isinstance(row["lat"], float):
+        try:
+            pts_df["lat 3857"][index], pts_df["lon 3857"][index] = transform_4326_to_3857(row["lat"], row["lon"])
+        except Exception as e:
+            print("Could not convert entry {0}:\n{1}".format(str(row["site_name"]), e))
 
-pts_df.to_csv("site-coordinates-3857")
+pts_df.to_csv("site-coordinates-3857.csv")
