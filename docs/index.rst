@@ -1,10 +1,10 @@
 .. documentation parent file.
 
 
-Bedload Seasons
-===============
+Bedload Meta-analysis
+=====================
 
-This is the documentation of supplemental materials for a scientific study on the time dimension of bedload.
+This is the code documentation for algorithms applied for processing data in a paper entitled `Meta-analysis of a large bedload transport rate dataset <https://doi.org/10.1016/j.geomorph.2023.108748>`_ by `Sebastian Schwindt <https://sebastian-schwindt.org>`_ , `Beatriz Negreiros <https://beatriz-negreiros.com>`_, Bridget Ochuko Mudiaga-Ojemu, and `Marwan A. Hassan <https://blogs.ubc.ca/mhassan/>`_ in the journal `Geomorphology dataset <https://doi.org/10.1016/j.geomorph.2023.108748>`_ in May 2023. Do not hesitate to `contact us <https://www.iws.uni-stuttgart.de/en/institute/team/Schwindt/>`_ for inquiries regarding this paper.
 
 
 .. admonition:: How to cite this code and data repository
